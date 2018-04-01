@@ -44,3 +44,7 @@ class Square:
 			(fx,fy) = (x + (w - fwidth)/2,y + (h - fheight)/2)
 			screen.blit(f,(fx,fy))
 		return draw
+
+	def equals(self, other):
+		'''check if two squares are equal'''
+		return self.position[0] == other.position[0] and self.position[1] == other.position[1]

@@ -1,0 +1,21 @@
+Name:
+Date:
+Peer's project:
+
+What is something you learned by reviewing your peer's project?
+i didnt know there was some code that could rerun a program
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+the way they generated random input was and interesting idea that i would like to try
+What suggestions would you have for your peer to improve his/her code?
+make the code which moves the square and turn it into a function that can be reused instead of just the base code
+also the if puzzle != perfectpuzzle will not work when the win condition happens, so a better way to check win was needed
+the conrgadulations text was too big to fit the screen
+What could have been clearer or better commented?
+the random moving of the puzzle to create a non-finished version
+Was there anything in the code that was confusing to you? If so, what?
+not really
+What is something he/she could add to the README.md to make it more descriptive?
+say that the only way to move the blocks is by clicking on them
+Pay a compliment to your peer based on the quality of his/her code.
+there was very little reused code and there were a lot of interesting ways that completed problems i never would have thought of

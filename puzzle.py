@@ -45,7 +45,13 @@ def main():
 	while True:
 		clock.tick(FPS)
 		screen.fill(black)
-		if(puzzle != perfectPuzzle):
+		win = True
+		for x in range(0, 15):
+			if(not puzzle[x].equals(perfectPuzzle[x])):
+				win = False
+				break
+
+		if(not win):
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
 					pygame.quit()
@@ -58,12 +64,17 @@ def main():
 							if(puzzle[15].check_proximity(clickedSquare)):
 								z.position = puzzle[15].position
 								puzzle[15].position = clickedSquare
+			for p in puzzle:
+				p.draw_square(pygame.draw, screen)
+			pygame.display.flip()
+
 		else:
 			font = pygame.font.SysFont("arial", 64)
-			text = "Congratulations! You won! Press Blank Square to Reset"
+			text = "Congratulations! You won! Press bottom right corner of the screen to Reset"
 			f = font.render(text, True, (255, 255, 255))
 			(fwidth, fheight) = font.size(text)
 			screen.blit(f, (screen_size[0] / 2, screen_size[1] / 2))
+			pygame.display.flip()
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
 					pygame.quit()
@@ -74,11 +85,6 @@ def main():
 					if clickedSquare == (3, 3):
 						os.execl(sys.executable, sys.executable, *sys.argv)
 
-		for p in puzzle:
-			p.draw_square(pygame.draw,screen)		
-
-		
-		pygame.display.flip()
 
 if __name__ == '__main__':
 	main()
